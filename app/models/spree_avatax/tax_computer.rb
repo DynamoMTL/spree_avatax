@@ -53,15 +53,14 @@ class SpreeAvatax::TaxComputer
   def reset_tax_attributes(order)
     order.all_adjustments.tax.destroy_all
     order.line_items.each do |line_item|
-      line_item.update_attributes!({
+      line_item.attributes = {
         additional_tax_total: 0,
         adjustment_total: 0,
         pre_tax_amount: 0,
         included_tax_total: 0,
-      })
-
+      }
       Spree::ItemAdjustments.new(line_item).update
-      line_item.save!
+      line_item.save(validate: false)
     end
 
     order.update_attributes!({
