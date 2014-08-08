@@ -21,7 +21,8 @@ class SpreeAvatax::Invoice
       :doc_type => doc_type,
       :company_code => SpreeAvatax::Config.company_code,
       :discount => order.promotion_adjustment_total.round(2).to_f,
-      :doc_code => order.number
+      :doc_code => order.number,
+      :commit => true
     )
     invoice.addresses = build_invoice_addresses
     invoice.lines = build_invoice_lines
