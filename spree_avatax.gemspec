@@ -21,7 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'hashie',      '~> 2.l.5'
   s.add_dependency 'multi_json'
 
-  s.add_dependency 'money',       '6.1.1'
+  s.add_dependency 'money',       '~>6.5.x'
 
   s.add_development_dependency 'rails',   '~>4.1.x'
 
