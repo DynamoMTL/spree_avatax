@@ -16,14 +16,14 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core',  '~> 2.4.x'
+  s.add_dependency "solidus", [">= 1.0.0", "< 1.2.0"]
   s.add_dependency 'avalara',     '~> 0.0.3'
   s.add_dependency 'hashie',      '~> 2.l.5'
   s.add_dependency 'multi_json'
 
   s.add_dependency 'money',       '~>6.5.x'
 
-  s.add_development_dependency 'rails',   '~>4.1.x'
+  s.add_development_dependency 'rails',   '~>4.2.x'
 
   # Required to test Honeybadger alerting
   s.add_development_dependency 'honeybadger'
