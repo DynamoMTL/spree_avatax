@@ -16,21 +16,18 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency "solidus", [">= 1.0.0", "< 1.2.0"]
+  s.add_dependency "solidus", [">= 1.0.0", "< 2"]
+
   s.add_dependency 'avalara',     '~> 0.0.3'
   s.add_dependency 'hashie',      '~> 2.l.5'
   s.add_dependency 'multi_json'
-
   s.add_dependency 'money',       '~>6.5.x'
 
   s.add_development_dependency 'rails',   '~>4.2.x'
-
   # Required to test Honeybadger alerting
   s.add_development_dependency 'honeybadger'
-
   # Required to test Pagerduty alerting
   s.add_development_dependency 'pagerduty'
-
   s.add_development_dependency 'capybara',        '~> 2.1'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'database_cleaner'
